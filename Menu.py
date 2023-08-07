@@ -3,7 +3,7 @@ x = 0
 # imported for clearing code
 import os
 # imported functions from a second file
-from functions_med_nya_funktioner_yippie import *
+from Functions import *
 
 # while loop of main menu
 while True:
