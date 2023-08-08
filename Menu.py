@@ -7,13 +7,12 @@ from Functions import *
 
 # while loop of main menu
 while True:
-  print("\nHello! How would you like to use the meal-generator?")
-  print("\n1. Randomize a meal")
-  print("2. Get meals based on ingredient")
-  print("3. Get vegetarian meals")
-  print("4. View a list of all meals")
+  print("\nHello! How would you like to use the recipe-generator?")
+  print("\n1. Randomize a recipe")
+  print("2. Get recipe based on ingredient")
+  print("3. Get vegetarian recipies")
+  print("4. View my saved recipies")
   print("5. Exit program")
-  print("6. Get meal by ingredients")
   print("\n------------------------------")
   
   x = int(input(">> Enter your choice >> : "))
@@ -28,7 +27,7 @@ while True:
     os.system('cls||clear')
     print("Here are examples of ingredients:")
     print("---------------------------------")
-    print_with_ingredients()
+    input_ingredients()
     # runs the called function
   elif x == 3:
     os.system('cls||clear')
@@ -48,12 +47,6 @@ while True:
     input("\n >> Press Enter to exit >>")
     break
     # ends the program
-  elif x == 6:
-    os.system('cls||clear')
-    print("Here are examples of ingredients:")
-    print("---------------------------------")
-    input_ingredients()
-    # runs the called function
   else:
     os.system('cls||clear')
     print("Invalid choice. Please enter a number between 1-5")

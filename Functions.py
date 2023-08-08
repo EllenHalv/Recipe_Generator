@@ -1,5 +1,6 @@
 import os
 import random
+from Input_Handler import *
 
 # class for all dinners
 class Dinner:
@@ -37,7 +38,7 @@ def print_all_meals():
     for meal in dinner:
         print(meal.name)
         # names of all meals are printed
-    input("\n >> Press Enter to return to menu >>")
+    press_enter()
     os.system('cls||clear')
 
 def print_random_meal():
@@ -48,7 +49,7 @@ def print_random_meal():
         # names from "dinner list" are imported to "meal_names list"
     print("\n" + random.choice(meal_names))
     # a random meal name is printed
-    input("\n>> Press Enter to return to menu >>")
+    press_enter()
     os.system('cls||clear')
 
 def print_veg():
@@ -56,7 +57,7 @@ def print_veg():
         if meal.veg == "vegetarian":
             print("\n" + meal.name)
             # if a meal from "dinner list" is vegetarian it is printed
-    input("\n >> Press Enter to return to menu >>")
+    press_enter()
     os.system('cls||clear')
 
 def print_meat():
@@ -64,30 +65,8 @@ def print_meat():
         if meal.veg == "meat":
             print("\n" + meal.name)
             # if a meal from "dinner list" has meat it is printed
-    input("\n >> Press Enter to return to menu >>")
+    press_enter()
     os.system('cls||clear')
-          
-def print_with_ingredients():
-    all_ingredients()
-    # runs the called function
-    ingredient = input("\n>> Enter an ingredient >> : ")
-    # user is asked to input an ingredient
-    os.system('cls||clear')
-    print("Here are examples of meals with" + " " + ">" + " " + ingredient + " " + "<" ":")
-    print("-------------------------------------------------")
-    for meal in dinner:
-        for i in meal.ingredients:
-            if i == ingredient:
-                print("\n" + meal.name)
-                # meals containing the ingredient from "user input" are printed
-    input("\n >> Press Enter to return to menu >>")
-    os.system('cls||clear')
-
-def input_ingredients():
-    all_ingredients()
-    ingredients_input = input("Enter ingredients separated by commas: ")
-    ingredients = [ingredient.strip() for ingredient in ingredients_input.split(",")]
-    find_meals_with_ingredients(ingredients)
 
 def find_meals_with_ingredients(ingredients):
     matching_meals = []  # Lista för matchande måltider

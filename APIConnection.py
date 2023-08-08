@@ -1,10 +1,11 @@
 import requests
 import os
 import pprint
+from Functions import *
 
 spoonacular_api_key = os.environ["SPOONACULAR_API_KEY"]
 
-#os.environ.get('SPOONACULAR_API_KEY') eller os.environ["SPOONACULAR_API_KEY"] 
+
 
 url = "https://api.spoonacular.com/recipes/findByNutrients"
 
@@ -19,6 +20,9 @@ spoonacular_response = requests.get(query)
 
 pprint.pprint(spoonacular_response.json())
 
+
+
+
 #---------------------------------------------------------
 response_API = requests.get('https://www.askpython.com/')
 print(response_API.status_code)
@@ -27,4 +31,13 @@ print(response_API.status_code)
 api_key = ""
 
 #def getAPIKey():
-    # hämta nyckeln här
+    # funktion för att hämta nyckeln här
+
+#---------------------------------------------------------
+
+def include_ingredients():
+    input_ingredients()
+    url = "https://api.spoonacular.com/recipes/includeIngredients"
+
+
+def exclude_ingredients():
