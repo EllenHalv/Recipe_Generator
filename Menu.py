@@ -4,6 +4,7 @@ x = 0
 import os
 # imported functions from a second file
 from Functions import *
+from Input_Handler import *
 
 # while loop of main menu
 while True:
