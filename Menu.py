@@ -28,7 +28,9 @@ while True:
     os.system('cls||clear')
     print("Here are examples of ingredients:")
     print("---------------------------------")
-    input_ingredients()
+    all_ingredients()
+    ingredients = input_ingredients()
+    find_meals_with_ingredients(ingredients)
     # runs the called function
   elif x == 3:
     os.system('cls||clear')
