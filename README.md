@@ -43,7 +43,7 @@ The Recipe Generator is a Python application that interacts with the Spoonacular
 
 ## Usage
 
-![Example]("Screenshot 2024-01-24 022048.png")
+![Example](screenshot.png)
 
 ### 1. Find Recipes by Ingredients
 
