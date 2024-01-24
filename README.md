@@ -43,6 +43,8 @@ The Recipe Generator is a Python application that interacts with the Spoonacular
 
 ## Usage
 
+![Example](Screenshot 2024-01-24 022048.png)
+
 ### 1. Find Recipes by Ingredients
 
 The menu allows you to navigate easily and find recipes based on the ingredients you have. Enter a comma-separated list of ingredients when prompted. Or randomize recipes!
