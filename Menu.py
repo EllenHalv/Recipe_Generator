@@ -5,16 +5,20 @@ import os
 # imported functions from a second file
 from Functions import *
 from Input_Handler import *
+from APIConnection import *
 
 # while loop of main menu
 while True:
-  print("\nHello! How would you like to use the recipe-generator?")
-  print("\n1. Randomize a recipe")
-  print("2. Get recipe based on ingredient")
+  print("\nHello! Welcome to the recipe-generator!")
+  print("\n1. Get a random recipe")
+  print("2. Get a recipe based on ingredients")
   print("3. Get vegetarian recipies")
   print("4. View my saved recipies")
   print("5. Exit program")
   print("\n------------------------------")
+  # get recipe without certain ingredients
+  # get recipe based on diet/food intolerance etc. (instead of veg put that here)
+  # get recipe based on protein
   
   x = int(input(">> Enter your choice >> : "))
   # int input
@@ -22,15 +26,13 @@ while True:
     os.system('cls||clear')
     print("Your random meal is: ")
     print("--------------------")
-    print_random_meal()
+    get_random_meal()
     # runs the called function
   elif x == 2:
     os.system('cls||clear')
     print("Here are examples of ingredients:")
     print("---------------------------------")
-    all_ingredients()
-    ingredients = input_ingredients()
-    find_meals_with_ingredients(ingredients)
+    include_ingredients()
     # runs the called function
   elif x == 3:
     os.system('cls||clear')
